@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'constance',
+    'constance.backends.database',
     'rest_framework',
     'users',
 ]
@@ -52,6 +54,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'restful_auth.urls'
+
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+
+CONSTANCE_CONFIG = {
+    'ACCESS_TOKEN_LIFETIME_SECONDS': (30, 'Access Token Lifetime in Seconds'),
+    'REFRESH_TOKEN_LIFETIME_DAYS': (30, 'Refresh Token Lifetime in Days'),
+}
 
 TEMPLATES = [
     {
