@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'restful_auth.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'accounts.authentication.JWTAuthentication',
+        'users.authentication.JWTAuthentication',
     ),
 }
 
