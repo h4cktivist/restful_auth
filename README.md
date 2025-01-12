@@ -67,3 +67,9 @@ Queries to each of the endpoints can be performed either using curl or Postman, 
 ./build.sh
 python -m gunicorn restful_auth.asgi:application -k uvicorn.workers.UvicornWorker
 ```
+
+
+### Tests
+```
+python manage.py test users
+```
